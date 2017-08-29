@@ -47,12 +47,8 @@ public class Main extends javax.swing.JFrame {
         jButton1.addActionListener(c);
         jButton2.addActionListener(c);
         jButton3.addActionListener(c);
-        jButton4.addActionListener(c);
-        jButton5.addActionListener(c);
         jButton2.setVisible(false);
         jButton3.setVisible(false);
-        jButton4.setVisible(false);
-        jButton5.setVisible(false);
     }
     
     /**
@@ -67,8 +63,6 @@ public class Main extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
@@ -83,17 +77,9 @@ public class Main extends javax.swing.JFrame {
 
         jButton3.setText("Exibição");
         getContentPane().add(jButton3);
-        jButton3.setBounds(260, 260, 120, 23);
+        jButton3.setBounds(270, 260, 110, 23);
 
-        jButton4.setText("Tipo Torta");
-        getContentPane().add(jButton4);
-        jButton4.setBounds(70, 290, 120, 23);
-
-        jButton5.setText("Tipo Barra");
-        getContentPane().add(jButton5);
-        jButton5.setBounds(210, 290, 120, 23);
-
-        setBounds(0, 0, 416, 363);
+        setBounds(0, 0, 416, 337);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -135,8 +121,6 @@ public class Main extends javax.swing.JFrame {
     public javax.swing.JButton jButton1;
     public javax.swing.JButton jButton2;
     public javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     // End of variables declaration//GEN-END:variables
 
     class Caretaker implements ActionListener{
@@ -154,8 +138,6 @@ public class Main extends javax.swing.JFrame {
                 m.p2.setVisible(false);
                 m.ps.setVisible(false);
                 jButton2.setVisible(true);
-                jButton4.setVisible(false);
-                jButton5.setVisible(false);
             }else
                 if(e.getSource() == jButton2){
                     m.ps.fai.clear();
@@ -164,8 +146,6 @@ public class Main extends javax.swing.JFrame {
                     m.p1.setVisible(false);
                     m.p2.setVisible(false);
                     jButton3.setVisible(true);
-                    jButton4.setVisible(false);
-                    jButton5.setVisible(false);
                 }else
                     if(e.getSource() == jButton3){
                         m.ps.setVisible(false);
@@ -174,28 +154,12 @@ public class Main extends javax.swing.JFrame {
                             m.p1.makeChart();
                             m.p1.setVisible(true);
                             m.p2.setVisible(false);
-                            jButton5.setVisible(true);
                         }else{
                             m.p2.makeChart();
                             m.p1.setVisible(false);
                             m.p2.setVisible(true);
-                            jButton4.setVisible(true);
                         }
-                        }else 
-                            if(e.getSource() == jButton4){
-                                m.p1.makeChart();
-                                m.p2.setVisible(false);
-                                m.p1.setVisible(true);
-                                jButton4.setVisible(false);
-                                jButton5.setVisible(true);
-                            }else
-                                if(e.getSource() == jButton5){
-                                m.p2.makeChart();
-                                m.p1.setVisible(false);
-                                m.p2.setVisible(true);
-                                jButton5.setVisible(false);
-                                jButton4.setVisible(true);
-                                }
+                    }
                         
         }
     }
