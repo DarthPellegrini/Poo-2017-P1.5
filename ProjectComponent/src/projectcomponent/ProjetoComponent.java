@@ -140,7 +140,7 @@ public class ProjetoComponent extends javax.swing.JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
             if(e.getSource() == jButton1){
-                jTextField1.setText(e.getSource().getClass().getName() + " pressionado.");
+                jTextField1.setText("O Botão foi pressionado.");
             }else 
                 if(e.getSource() == jButton2){
                     jButton1.setVisible(false);
@@ -181,25 +181,27 @@ public class ProjetoComponent extends javax.swing.JFrame {
         @Override
         public void componentResized(ComponentEvent e) {
             if(e.getComponent() == jButton1){
-                jTextField1.setText(e.getComponent().getClass().getName() + " foi redimensionado.");
+                //Inicialmente utilizando apenas o nome do botão, ao invés do seu texto.
+                //jTextField1.setText(e.getComponent().getClass().getName() + " foi redimensionado.");
+                jTextField1.setText("O Botão foi redimensionado.");
             }
         }
         @Override
         public void componentMoved(ComponentEvent e) {
             if(e.getComponent() == jButton1){
-                jTextField1.setText(e.getComponent().getClass().getName() + " se movimentou.");
+                jTextField1.setText("O Botão se movimentou.");
             }
         }
         @Override
         public void componentShown(ComponentEvent e) {
             if(e.getComponent() == jButton1){
-                jTextField1.setText(e.getComponent().getClass().getName() + " apareceu.");
+                jTextField1.setText("O Botão foi exibido.");
             }
         }
         @Override
         public void componentHidden(ComponentEvent e) {
             if(e.getComponent() == jButton1){
-                jTextField1.setText(e.getComponent().getClass().getName() + " foi escondido");
+                jTextField1.setText("O Botão foi ocultado.");
             }
         }
         
