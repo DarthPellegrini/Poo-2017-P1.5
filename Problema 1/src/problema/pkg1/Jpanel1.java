@@ -31,8 +31,10 @@ public class Jpanel1 extends javax.swing.JPanel {
     
     public void makeChart(){
         DefaultPieDataset dataset = new DefaultPieDataset();
-        for(int i = 0; i < m.ps.fai.size();i++)
-            dataset.setValue((i*m.ps.getfxNum() + "-" + (i+1)*m.ps.getfxNum()), m.ps.fai.get(i));
+        for(int i = 0; i < m.ps.fai.size();i++){
+            if(m.ps.fai.get(i) > 0)
+                dataset.setValue((i*m.ps.getfxNum() + "-" + (i+1)*m.ps.getfxNum()), m.ps.fai.get(i));
+        }
         JFreeChart chart = ChartFactory.createPieChart(
                 "Quantidade de pessoas na mesma faixa etária", //label
                 dataset, //dados

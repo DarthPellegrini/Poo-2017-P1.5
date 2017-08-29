@@ -29,8 +29,10 @@ public class Jpanel2 extends javax.swing.JPanel {
     
     public void makeChart(){
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-        for(int i = 0; i < m.ps.fai.size();i++)
-            dataset.setValue(m.ps.fai.get(i),"Quantidade",(i*m.ps.getfxNum() + "-" + (i+1)*m.ps.getfxNum()));
+        for(int i = 0; i < m.ps.fai.size();i++){
+            if(m.ps.fai.get(i) > 0)
+                dataset.setValue(m.ps.fai.get(i),"Quantidade",(i*m.ps.getfxNum() + "-" + (i+1)*m.ps.getfxNum()));
+        }
         JFreeChart barChart = ChartFactory.createBarChart(
                 "Quantidade de pessoas por faixa etária",
                 "Faixa Etária", "Quantidade de Pessoas",
