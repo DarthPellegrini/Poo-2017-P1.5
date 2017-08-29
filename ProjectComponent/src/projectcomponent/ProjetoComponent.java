@@ -170,7 +170,7 @@ public class ProjetoComponent extends javax.swing.JFrame {
                                             jButton1.setLocation(jButton1.getX()-new Random().nextInt(10), jButton1.getY());
                                         }
                                     }else{
-                                        if(jButton1.getX() < jButton6.getX()){
+                                        if(jButton1.getX() < jButton6.getX()+jButton6.getWidth()){
                                             jButton1.setLocation(jButton1.getX()+new Random().nextInt(10), jButton1.getY());
                                         }
                                     }
